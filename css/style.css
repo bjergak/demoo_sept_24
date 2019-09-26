@@ -3,3 +3,10 @@ background-color : #999;
 color: #EEE;
 padding: 1em;
 }
+
+article div{
+  display: grid;
+    grid-gap: .25em;
+}
+
+.feat1{grid-area:feat1;}
