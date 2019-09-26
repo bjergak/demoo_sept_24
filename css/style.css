@@ -1,12 +1,44 @@
 article div {
-background-color : #999;
-color: #EEE;
 padding: 1em;
 }
 
 article div{
   display: grid;
-    grid-gap: .25em;
+  grid-gap: .25em;
+  grid-template-areas:
+  "feat1 feat2 feat3"
+  "wall blog1 blog1 blog1"
+  "wall blog2 blog2 blog2"
+  "wall blog3 blog3 blog3"
 }
 
 .feat1{grid-area:feat1;}
+.feat2{grid-area:feat2;}
+.feat3{grid-area:feat3;}
+.wall{grid-area:wall;}
+.blog1{grid-area:blog1;}
+.blog2{grid-area:blog2;}
+.blog3{grid-area:blog3;}
+
+footer{
+background-color: #333;
+color: #EEE;
+text-align: center;
+padding: 1em;
+}
+
+@media screen and (max-width: 767px) {
+  article {
+    grid-template-areas:
+    "feat1"
+    "feat2"
+    "feat3"
+    "blog1"
+    "blog2"
+    "blog3"
+    "wall"
+  }
+  .wall {
+    display: none;
+  }
+}
